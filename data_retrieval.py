@@ -27,7 +27,7 @@ genre = []
 rev = []
 
 
-for k in range(1,400): # Returns 5947 movies as data
+for k in range(1,500): # Returns 7387 movies as data
     api = 'https://api.themoviedb.org/3/movie/popular?api_key=' + api_key + '&language=en-US&page='+str(k)
     data = ses.get(api)
     j = data.json()
@@ -78,4 +78,4 @@ for k in range(1,400): # Returns 5947 movies as data
                 rev.append(None)
 
 df = pd.DataFrame({'Id':ids, 'Title':titles,'Description':desc,'Popularity':pop,'Genres':genre,'Release Date': date,'Rating':rate,'Vote Count':resp,'Revenue':rev})
-df.to_csv('movies.csv')
+df.to_csv('movies2.csv')
