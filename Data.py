@@ -6,7 +6,3 @@ movies_df = movies_df.drop(columns=movies_df.columns[0])
 st.write(movies_df)
 st.caption("Data Source: TMDB")
 cast_df = pd.read_csv('movie_cast.csv')
-
-# Oscar
-# Revenue
-# Genre vs revenue
