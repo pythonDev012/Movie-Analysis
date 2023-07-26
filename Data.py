@@ -14,4 +14,3 @@ movies_df = movies_df[movies_df['Release Date'] < "2022-01-01"]
 st.write(movies_df)
 st.caption("Data Source: TMDB")
 cast_df = pd.read_csv('movie_cast.csv')
-
