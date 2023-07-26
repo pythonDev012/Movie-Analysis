@@ -56,6 +56,8 @@ revenue = [rev_dr,rev_action,rev_adv,rev_anim,rev_wes,rev_mys,rev_crim,rev_his,r
 genres = ['Drama','Action','Adventure','Animation','Western','Mystery','Crime','History','Comedy','Fantasy','Romance','Science Fiction','Thriller','Horror']
 gen_rev = pd.DataFrame({'Genres':genres, 'Revenue':revenue})
 
+st.write('## Comparison of Revenue for each Movie Genre')
 st.altair_chart(alt.Chart(gen_rev).mark_bar().encode(x = alt.X('Genres', title = "Movie Genre", axis= alt.Axis(labelAngle = -45)), y = alt.Y('Revenue', title = 'Revenue (in USD)')).properties(width = 800,height = 500).configure_scale(bandPaddingInner=0.2))
 
+st.write('## How Revenue varies with Ratings')
 st.altair_chart(alt.Chart(movies_df).mark_bar().encode(x = alt.X('Rating', title = "Ratings", axis= alt.Axis(labelAngle = -45)), y = alt.Y('Revenue', title = 'Revenue (in USD)')).properties(width = 800,height = 500).configure_scale(bandPaddingInner=0.2))
